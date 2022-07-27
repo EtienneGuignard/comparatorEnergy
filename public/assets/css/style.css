@@ -1,0 +1,12 @@
+
+.formHome input{
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 100%;
+}
+.formHome input[type=checkbox]{
+    width:20px;
+    margin: 5px;
+
+}

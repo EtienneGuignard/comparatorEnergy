@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="row" style="background-image: url(' {{ asset("../assets/img/windrader-4832701_960_720.jpg") }}'">
+        <div class="col">
+            <form class="formHome" action="{{path('app_home')}}" method="POST">
+                <div class="mb-3">
+                    <input type="email" name="email" id="email">
+                </div>
+                <div class="mb-3">
+                    <input type="text" name="firstname" id="firstname">
+                </div>
+                <div class="mb-3">
+                    <input type="text" name="lastname" id="lastname">
+                </div>
+                <div class="mb-2">
+                    <input type="checkbox" name="confirmPrivacy" id="confirmPrivacy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint dignissimos sit ratione optio aspernatur assumenda, delectus cum dolore inventore consequuntur error nemo doloremque repudiandae eum commodi est tenetur temporibus molestias?</input>
+                </div>
+                <input type="submit" value="submit">
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
