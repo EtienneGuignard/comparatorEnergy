@@ -3,28 +3,31 @@
 {% block title %}Hello HomeController!{% endblock %}
 
 {% block body %}
-<div class="container-fluid" style="background-image: url(' {{ asset("../assets/img/windrader-4832701_960_720.jpg") }}'">
-    <div class="row">
-    <div class="col-xs-12 col-md-2">
+<div class="container-fluid" style="background-image: url(' {{ asset("../assets/img/Heroimage.jpg") }}'">
+    <div class="row justify-content-center">
+    <div class="col-12 col-lg-2">
         </div>
-        <div class="col-xs-12 col-md-3 bg-primary py-2">
+        <div class="col-12 col-lg-3 bg-primary py-2 my-2 text-white rounded">
             <form class="formHome" action="{{path('app_home')}}" method="POST">
                 <div class="mb-3">
+                    <label for="email">Email</label>
                     <input type="email" name="email" id="email">
                 </div>
                 <div class="mb-3">
+                    <label for="email">First Name</label>
                     <input type="text" name="firstname" id="firstname">
                 </div>
                 <div class="mb-3">
+                    <label for="email">Last Name</label>
                     <input type="text" name="lastname" id="lastname">
                 </div>
                 <div class="mb-2">
-                    <input type="checkbox" name="confirmPrivacy" id="confirmPrivacy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint dignissimos sit ratione optio aspernatur assumenda, delectus cum dolore inventore consequuntur error nemo doloremque repudiandae eum commodi est tenetur temporibus molestias?</input>
+                    <input type="checkbox" name="confirmPrivacy" id="confirmPrivacy"> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint dignissimos sit ratione optio aspernatur assumenda, delectus cum dolore inventore consequuntur error nemo doloremque repudiandae eum commodi est tenetur temporibus molestias?</span>
                 </div>
                 <input type="submit" value="submit">
             </form>
         </div>
-        <div class="col-xs-12 col-md-5">
+        <div class="col-12 col-lg-5">
         </div>
         
     </div>
@@ -45,27 +48,48 @@
 
 <section class="container mt-5">
     <div class="row rowProcessSection">
-        <div class="col">
-            <div class="row">
+        <div class="col-sm-12 col-lg-6">
+            <div class="row align-items-center justify-content-center rowHome mx-1 mt-3">
+                <div class="col-2">
+                    <i class="fa fa-gift icon mt-3" aria-hidden="true"></i>
+                </div>
+                <div class="col-10">
+                            <h4 class="pt-2">Experienced consultant</h4> 
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni officiis ducimus tempora qui debitis at quam tenetur, minus nostrum soluta illo corporis, dolore enim maxime modi sapiente distinctio minima architecto?</p>
+                </div>
+            </div>
+            <div class="row align-items-center justify-content-center rowHome mx-1 mt-3">
+                <div class="col-2">
+                    <i class="fa fa-star icon mt-3" aria-hidden="true"></i>
+                </div>
+            <div class="col-10">
+                <h4 class="pt-2">Experienced consultant</h4> 
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni officiis ducimus tempora qui debitis at quam tenetur, minus nostrum soluta illo corporis, dolore enim maxime modi sapiente distinctio minima architecto?</p>
             </div>
-            <div class="row">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni officiis ducimus tempora qui debitis at quam tenetur, minus nostrum soluta illo corporis, dolore enim maxime modi sapiente distinctio minima architecto?</p>
             </div>
         </div>
-        <div class="col">
-                <div class="row">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque laborum, fugiat voluptatibus ratione, beatae eveniet vel id vero ipsum at obcaecati unde, repellendus quibusdam iusto ipsa explicabo quia qui autem!</p>
-                </div>
+        <div class="col-sm-12 col-lg-6">
+                <div class="row align-items-center justify-content-center rowHome mx-1 mt-3">
+                    
+                    <div class="col-2">
+                    <i class="fa fa-thumbs-up icon mt-3" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-10">
+                        <h4 class="pt-2">Experienced consultant</h4> 
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque laborum, fugiat voluptatibus ratione, beatae eveniet vel id vero ipsum at obcaecati unde, repellendus quibusdam iusto ipsa explicabo quia qui autem!</p>
+                    </div>
+                    </div>
+                    
         </div>
     </div>
 </section>
-<section class="container">
-    <div class="row rowProcessSection">
-        <div class="col">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quos exercitationem temporibus sed ullam. Illo sit optio adipisci mollitia doloribus aliquid temporibus voluptatem nesciunt ipsa quis. Sed facere vero in!</p>
+<section class="container-fluid mt-5">
+    <div class="row justify-content-center  rowHome rowProcessSection">
+        <div class=" col-12 col-lg-4 bg-white">
+            <h4 class="pt-2">Experienced consultant</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quos exercitationem temporibus sed ullam. Illo sit optio adipisci mollitia doloribus aliquid temporibus voluptatem nesciunt ipsa quis. Sed facere vero in!</p>
         </div>
-        <div class="col">
+        <div class="col-12 col-lg-4">
         <img src="https://via.placeholder.com/400x600" alt="buissnesswoman images">
         </div>
     </div>
