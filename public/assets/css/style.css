@@ -1,4 +1,30 @@
 
+/* 
+color text #06192a 
+blue #50A1E8
+ green #5EA44F
+*/
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+body{
+    min-height: 100vh;
+}
+.mainNav{
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: transparent;
+}
+
+
+.ml-auto .dropdown-menu {
+    left: auto !important;
+    right: 0px;
+  }
+  .margStart{
+    padding-top: 100px;
+  }
 .formHome input{
     padding: 5px;
     border: 2px solid black;
@@ -10,25 +36,84 @@
     margin: 5px;
 
 }
+.formHome textarea{
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 100%;
+}
+label{
+    padding-left: 10px;
+}
 
 .imgCaroussel{
     width:100%
 }
-
+.caroussel  div{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
 .rowProcessSection{
     align-items: center;
 }
-
 .rowHome{
     background-color:#f5f5f5;
     border-radius: 5px;
 }
-
 .icon{
     padding: 20px;
     border-radius: 50%;
-    background: green;
+    background: #5EA44F;
     font-size: 24px;
     fill:white;
     color:white;
+}
+.TextBlue{
+    color:#50A1E8 ;
+}
+h2{
+    font-size: 2.1rem;
+    text-align: center;
+    font-weight: 800
+}
+.hero{
+    padding-top: 60px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.heroform{
+    background-color: #50A1E8;
+    opacity: 1 !important;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: #06192a !important;;
+    opacity: 1;
+}
+.alert-success{
+    margin-top: 100px;
+ background-color:#06192a !important;
+ border-color:black;
+}
+.navbar-brand{
+    color: #06192a !important; 
+    font-family: 'Carter One', cursive !important;
+}
+.navbar-toggler-icon{
+    color:#06192a ;
+}
+#office{
+    max-width: 400px;
+    max-height: 500px;
+}
+.inputGreen{
+    background-color: #5EA44F;
+    color: #f5f5f5;
+    font-weight: bold;
+}
+.labelCheck{
+padding: 0px;
+display: contents;
+font-size: 12px;
+
 }
