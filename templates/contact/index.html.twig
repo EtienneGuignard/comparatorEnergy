@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% set formAlert = false %}
+    {% for message in app.flashes('contactSuccess') %}
+        {% set formAlert = true %}
+            <div class="alert alert-success">
+                <a href="{{ path('app_home') }}">{{ message }}</a>
+            </div>
+    {% endfor %}
+    {% for message in app.flashes('contactError') %}
+        {% set formAlert = true %}
+            <div class="alert alert-warning">
+            {{ message }}
+            </div>
+    {% endfor %}
+    {% if formAlert == false %}
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-4 mt-5">
+                <h2 class="TextBlue py-4">
+                    Contattaci
+                </h2>
+                
+                {{ form_start(form, {'attr': {'class': 'formHome'}}) }}
+                {{ form_row(form.name) }}
+                {{ form_row(form.email) }}
+                {{ form_errors(form.email) }}
+                {{ form_row(form.subject) }}
+                {{ form_row(form.message) }}
+        
+                <div class=" text-center">
+                    <input type="submit" value="Inviare" class="inputGreen my-3 rounded px-5">
+                </div>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

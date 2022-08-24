@@ -5,6 +5,9 @@ blue #50A1E8
  green #5EA44F
 */
 @import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+body{
+    min-height: 100vh;
+}
 .mainNav{
 
     position: fixed;
@@ -14,9 +17,13 @@ blue #50A1E8
     background-color: transparent;
 }
 
+
 .ml-auto .dropdown-menu {
     left: auto !important;
     right: 0px;
+  }
+  .margStart{
+    padding-top: 100px;
   }
 .formHome input{
     padding: 5px;
@@ -28,6 +35,12 @@ blue #50A1E8
     width:20px;
     margin: 5px;
 
+}
+.formHome textarea{
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 100%;
 }
 label{
     padding-left: 10px;
@@ -41,16 +54,13 @@ label{
     margin-left: 20px;
     margin-right: 20px;
 }
-
 .rowProcessSection{
     align-items: center;
 }
-
 .rowHome{
     background-color:#f5f5f5;
     border-radius: 5px;
 }
-
 .icon{
     padding: 20px;
     border-radius: 50%;
@@ -67,25 +77,28 @@ h2{
     text-align: center;
     font-weight: 800
 }
-.heroform{
-    background-color: #50A1E8;
-}
-
 .hero{
-    opacity: 0.6;
     padding-top: 60px;
     background-repeat: no-repeat;
     background-size: cover;
 }
-
-.navbar-dark .navbar-nav .nav-link {
-    color: #06192a !important;
+.heroform{
+    background-color: #50A1E8;
+    opacity: 1 !important;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: #06192a !important;;
+    opacity: 1;
+}
+.alert-success{
+    margin-top: 100px;
+ background-color:#06192a !important;
+ border-color:black;
 }
 .navbar-brand{
     color: #06192a !important; 
     font-family: 'Carter One', cursive !important;
 }
-
 .navbar-toggler-icon{
     color:#06192a ;
 }

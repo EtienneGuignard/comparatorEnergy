@@ -38,6 +38,12 @@ class Lead
     #[ORM\Column(nullable: true)]
     private ?bool $ConfirmPartner = null;
 
+    #[ORM\Column(length: 1000, nullable: true)]
+    private ?string $url = null;
+
+    #[ORM\Column(length: 3, nullable: true)]
+    private ?string $region = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -135,6 +141,30 @@ class Lead
     public function setConfirmPartner(?bool $ConfirmPartner): self
     {
         $this->ConfirmPartner = $ConfirmPartner;
+
+        return $this;
+    }
+
+    public function getUrl(): ?string
+    {
+        return $this->url;
+    }
+
+    public function setUrl(?string $url): self
+    {
+        $this->url = $url;
+
+        return $this;
+    }
+
+    public function getRegion(): ?string
+    {
+        return $this->region;
+    }
+
+    public function setRegion(?string $region): self
+    {
+        $this->region = $region;
 
         return $this;
     }
