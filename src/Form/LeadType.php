@@ -9,6 +9,7 @@ use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -40,13 +41,16 @@ class LeadType extends AbstractType
             ->add('confirmPrivacy', CheckboxType::class, [
             ])
             ->add('ConfirmPartner', CheckboxType::class, [
+                'required'=> false
             ])
 
             ->add('url', HiddenType::class, [
             ])
             ->add('region', HiddenType::class, [
                 ])
-        ;
+            ->add('submit', SubmitType::class, [
+                'attr' => ['class' => 'btn  inputGreen mt-3'],
+                ]);
         
     }
 

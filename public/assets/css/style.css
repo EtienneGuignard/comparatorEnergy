@@ -73,7 +73,7 @@ border-radius: 10px;
 }
 .formHome input{
     padding: 5px;
-    border: 2px solid black;
+    border: 1px solid #06192a;
     border-radius: 15px;
     width: 100%;
 }
@@ -84,7 +84,7 @@ border-radius: 10px;
 }
 .formHome textarea{
     padding: 5px;
-    border: 2px solid black;
+    border: 1px solid #06192a;
     border-radius: 15px;
     width: 100%;
 }
@@ -106,6 +106,10 @@ label{
     background-color: #5EA44F;
     color: #f5f5f5;
     font-weight: bold;
+    justify-self: center;
+    border-radius: 15px;
+    margin: 0 auto;
+    border: 1px solid #06192a;
 }
 .text-green {
 color: #5EA44F;    
@@ -179,9 +183,16 @@ h2{
  background-color:#06192a !important;
  border-color:black;
 }
+.img-mobile{
+    display: none;
+}
 
 @media (max-width: 767.98px){
 
+    .img-mobile{
+        display: block;
+        width: 100%;
+    }
     .img-review{
         display: none;
     }
