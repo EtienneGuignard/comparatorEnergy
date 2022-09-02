@@ -7,6 +7,7 @@ blue #50A1E8
 @import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
 body{
     min-height: 100vh;
+    font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", -apple-system, BlinkMacSystemFont;
 }
 .mainNav{
 
@@ -22,9 +23,54 @@ body{
     left: auto !important;
     right: 0px;
   }
-  .margStart{
+
+
+
+/* Hero + form */
+
+.hero{
     padding-top: 100px;
-  }
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.heroform{
+    background-color: #50A1E8;
+    opacity: 1;
+    margin-bottom: 2rem !important;
+}
+.h1-hero{
+    font-weight: 800;
+    font-size: 2.9rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    color: #06192A;
+    margin-top: 1rem;
+    text-align: left;
+    margin-right: 4rem;
+}
+.hr-hero{
+border: 2px solid #50A1E8;
+border-radius: 10px;
+ width: 25%;
+ opacity: 1;
+}
+.text-hero{
+    text-align: left;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #06192A;
+
+}
+#t-h-bottom{
+    margin-bottom: 2rem;
+}
+.span-fa-hero{
+  color:#06192a; 
+  font-weight: 500;
+}
 .formHome input{
     padding: 5px;
     border: 2px solid black;
@@ -45,7 +91,57 @@ body{
 label{
     padding-left: 10px;
 }
+.navbar-light .navbar-nav .nav-link {
+    color: #06192a !important;;
+    opacity: 1;
+}
+.navbar-toggler-icon{
+    color:#06192a ;
+}
+#office{
+    max-width: 400px;
+    max-height: 500px;
+}
+.inputGreen{
+    background-color: #5EA44F;
+    color: #f5f5f5;
+    font-weight: bold;
+}
+.text-green {
+color: #5EA44F;    
+}
+.labelCheck{
+padding: 0px;
+display: contents;
+font-size: 12px;
 
+}
+
+@media (max-width: 767.98px){
+.h1-hero {
+    margin:2rem 2rem 0.5rem 2rem;
+    text-align: center;
+    font-size: 2rem;
+}
+.text-hero{
+    text-align: center;
+    font-size: 1.25rem;
+    margin-bottom: 0.7rem;
+
+
+}
+.hr-hero{
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+.hero{
+    padding-top: 60px;
+}
+.heroform{
+    margin-bottom: 0 !important;
+}
+}
+/* Caroussel */
 .imgCaroussel{
     width:100%
 }
@@ -77,43 +173,16 @@ h2{
     text-align: center;
     font-weight: 800
 }
-.hero{
-    padding-top: 60px;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.heroform{
-    background-color: #50A1E8;
-    opacity: 1 !important;
-}
-.navbar-light .navbar-nav .nav-link {
-    color: #06192a !important;;
-    opacity: 1;
-}
+
 .alert-success{
     margin-top: 100px;
  background-color:#06192a !important;
  border-color:black;
 }
-.navbar-brand{
-    color: #06192a !important; 
-    font-family: 'Carter One', cursive !important;
-}
-.navbar-toggler-icon{
-    color:#06192a ;
-}
-#office{
-    max-width: 400px;
-    max-height: 500px;
-}
-.inputGreen{
-    background-color: #5EA44F;
-    color: #f5f5f5;
-    font-weight: bold;
-}
-.labelCheck{
-padding: 0px;
-display: contents;
-font-size: 12px;
 
+@media (max-width: 767.98px){
+
+    .img-review{
+        display: none;
+    }
 }

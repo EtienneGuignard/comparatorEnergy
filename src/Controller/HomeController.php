@@ -49,7 +49,7 @@ class HomeController extends AbstractController
 }
 function postData($ip,$name, $lastname, $email,$dob,$zip,$address,$confirmPrivacy,$confirmPartner,$url,$region,$sid, $timestamp){
     $client= HttpClient::create();
-        $client->request('POST', 'https://renovadsdata.herokuapp.com/api/leadsV2', [
+        $client->request('POST', 'https://renovadsdata.herokuapp.com/api/leads/v2', [
         'body' => [
             'ip'=>$ip,
             'email'=>$email,

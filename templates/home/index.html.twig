@@ -7,6 +7,33 @@
 
 
     <div class="row justify-content-center">
+             <div class="col-12 col-lg-5">
+                <h1 class="h1-hero">Ti sfidiamo a trovare un affare migliore!</h1>
+                <hr class="hr-hero">
+                <p class="text-hero">Al passaggio riceverai in regalo un kit gratuito di lampadine LED</p>
+                <p class="text-hero" id="t-h-bottom">Compila il modulo, ci vogliono pochi secondi. Ti contatteremo al più presto per trovare insieme un'offerta più conveniente per le tue esigenze.</p>
+                    <p class="mb-2">
+                            <span class="fa-stack small">
+                                <i class="fa fa-circle text-green fa-stack-2x"></i>
+                                <i class="fa fa-check fa-stack-1x fa-inverse"></i>
+                            </span>
+                            <span class="ml-1 span-fa-hero">Servizio eccellente</span>
+                    </p>
+                    <p class="mb-2">
+                              <span class="fa-stack small">
+                                <i class="fa fa-circle text-green fa-stack-2x"></i>
+                                <i class="fa fa-check fa-stack-1x fa-inverse"></i>
+                            </span>
+                            <span class="ml-1 span-fa-hero">Energia pulita da fonti rinnovabili</span>
+                    </p>
+                    <p class="mb-4">
+                              <span class="fa-stack small">
+                                <i class="fa fa-circle text-green fa-stack-2x"></i>
+                                <i class="fa fa-check fa-stack-1x fa-inverse"></i>
+                            </span>
+                            <span class="ml-1 span-fa-hero">Prezzi competitivi</span>
+                    </p>
+            </div>
             <div class="col-12 col-lg-3 heroform py-2 my-2 text-white rounded">
                 {{ form_start(form, {'attr': {'class': 'formHome'}}) }}
                     <div class="row mb-3">
@@ -43,20 +70,16 @@
                 
                     <div class="mb-2">
                         {{ form_widget(form.confirmPrivacy) }} {{ form_label(form.confirmPrivacy, "Dichiaro d'esser maggiorenne. Ho letto ed accetto il regolamento e l'informativa privacy.", {
-    'label_attr': {'class': 'labelCheck'}
-}) }}
+                         'label_attr': {'class': 'labelCheck'}}) }}
                     </div>
                      <div class="mb-2">
                      {{ form_widget(form.ConfirmPartner)}}{{ form_label(form.ConfirmPartner, "Acconsento al trasferimento dei miei dati personali ai partners indicati nell'informativa privacy per finalità di marketing.", {
-    'label_attr': {'class': 'labelCheck'}}) }}
-    </div>
+                                'label_attr': {'class': 'labelCheck'}}) }}
+                     </div>
                      
                     <input type="submit" name="submit" class="inputGreen mt-3" value="Ottieni un affare migliore ">
                 {{ form_end(form) }}
-            </div>
-        <div class="col-12 col-lg-5">
-        </div>
-        
+            </div> 
     </div>
 </div>
 {# caroussel #}
@@ -67,7 +90,6 @@
             <div><img class="imgCaroussel" src="{{ asset('assets/img/supplier/britishgas.png') }}" style="width:100%;"></div>
             <div><img class="imgCaroussel" src="{{ asset('assets/img/supplier/edf.png') }}" style="width:100%;"></div>
             <div><img class="imgCaroussel" src="{{ asset('assets/img/supplier/Eon.png') }}" style="width:100%;"></div>
-            {# <div><img class="imgCaroussel" src="{{ asset('assets/img/supplier/npower.png') }}" style="width:100%; "></div> #}
             <div><img class="imgCaroussel" src="{{ asset('assets/img/supplier/britishgas.png') }}" style="width:100%; "></div>
             <div><img class="imgCaroussel" src="{{ asset('assets/img/supplier/edf.png') }}" style="width:100%;"></div>
             </div>
@@ -82,8 +104,8 @@
                     <i class="fa fa-gift icon mt-3" aria-hidden="true"></i>
                 </div>
                 <div class="col-10">
-                            <h4 class="pt-2">Experienced consultant</h4> 
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni officiis ducimus tempora qui debitis at quam tenetur, minus nostrum soluta illo corporis, dolore enim maxime modi sapiente distinctio minima architecto?</p>
+                            <h4 class="pt-2">100% Gratuito</h4> 
+                            <p>Nessuna commissione, nessun costo aggiuntivo. Il nostro servizio è gratuito, senza impegno e non riserva brutte sorprese sul finale. La trasparenza è un punto di forza. Per noi e per voi.</p>
                 </div>
             </div>
             <div class="row align-items-center justify-content-center rowHome mx-1 mt-3">
@@ -91,8 +113,8 @@
                     <i class="fa fa-star icon mt-3" aria-hidden="true"></i>
                 </div>
             <div class="col-sm-12 col-md-10">
-                <h4 class="pt-2">Experienced consultant</h4> 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni officiis ducimus tempora qui debitis at quam tenetur, minus nostrum soluta illo corporis, dolore enim maxime modi sapiente distinctio minima architecto?</p>
+                <h4 class="pt-2">Esperienza</h4> 
+                <p>Dal 2008 la società Futura enrgia, proprietaria de L'enrgia che voli, è tra le più competitive del settore. Mette in relazione professionisti selezionati e privati che hanno concrete necessità di prestiti, mutui e prodotti assicurativi.</p>
             </div>
             </div>
         </div>
@@ -103,8 +125,8 @@
                     <i class="fa fa-thumbs-up icon mt-3" aria-hidden="true"></i>
                     </div>
                     <div class="col-sm-12 col-md-10">
-                        <h4 class="pt-2">Experienced consultant</h4> 
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque laborum, fugiat voluptatibus ratione, beatae eveniet vel id vero ipsum at obcaecati unde, repellendus quibusdam iusto ipsa explicabo quia qui autem!</p>
+                        <h4 class="pt-2">Indipendente</h4> 
+                        <p>Vi mettiamo in contatto con i migliori professionisti del settore in modo semplice e veloce. Bastano due clic per ricevere gratuitamente la proposta adatta alle vostre necessità</p>
                     </div>
                     </div>
                     
@@ -114,21 +136,22 @@
 <section class="container-fluid mt-5">
     <div class="row justify-content-center  rowHome rowProcessSection">
         <div class=" col-6 col-lg-4 bg-white rounded">
-            <h4 class="pt-2">Experienced consultant</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quos exercitationem temporibus sed ullam. Illo sit optio adipisci mollitia doloribus aliquid temporibus voluptatem nesciunt ipsa quis. Sed facere vero in!</p>
+            <h4 class="py-2 text-center">Revisore Facebook</h4>
+            <div class="text-small text-center mb-2">
+                                            <i class="fa-star fa text-warning"></i>
+                                            <i class="fa-star fa text-warning"></i>
+                                            <i class="fa-star fa text-warning"></i>
+                                            <i class="fa-star fa text-warning"></i>
+                                            <i class="fa-star fa text-warning"></i>
+            </div>
+            <p>Ottima offerta, prezzi giusti, trasparenza e chiarezza nelle fatture oltre che nel fornire informazioni e chiarimenti!! Da consigliare a chi vuole ricevere un ottimo servizio!!</p>
+            <p class="text-center">Federico Pazienza</p>
+            <p></p>
         </div>
-        <div class="col-6 col-lg-4">
-        <img src="{{asset("../assets/img/stockOffice.jpg")}}" id="office" alt="people workingin office">
+        <div class="col-12 col-lg-4">
+        <img  class="img-review" src="{{asset("../assets/img/stockOffice.jpg")}}" id="office" alt="people workingin office">
         </div>
     </div>
 </section>
 
-{% block javascripts %}
-   <script type="text/javascript" src="{{ asset('assets/js/bootstrap.bundle.min.js') }}" crossorigin="anonymous"></script>
-            <script type="text/javascript" src="{{ asset('assets/js/jquery-3.6.0.min.js') }}"></script>
-            <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-            <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-            <script type="text/javascript" src="{{ asset('assets/js/script.js') }}"></script>
-            
-{% endblock %}
 {% endblock %}
