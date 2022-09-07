@@ -1,13 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Futura energie l'enrgia che volta{% endblock %}
+{% block title %}Grazie mille{% endblock %}
 
 {% block body %}
 <div class="container-fluid hero">
 
 
     <div class="row justify-content-center">
-            <div class="col-12 col-lg-5">
+            <div class="col-12 col-lg-5 thank-message-mobile">
                 <h1 class="h1-hero">Ti sfidiamo a trovare un affare migliore!</h1>
                 <hr class="hr-hero">
                 <p class="text-hero">Al passaggio riceverai in regalo un kit gratuito di lampadine LED</p>
@@ -34,61 +34,10 @@
                             <span class="ml-1 span-fa-hero">Prezzi competitivi</span>
                     </p>
             </div>
-            <div class="col-12 col-lg-3 heroform py-2 my-2 text-white rounded">
-                {{ form_start(form, {'attr': {'class': 'formHome'}}) }}
-                    <div class="row mb-3">
-                        <div class="col-8 ">
-                            <label for="email">Email</label>
-                                {{ form_widget(form.email) }}
-                        </div>
-                        <div class="col-4 ">
-                            <label for="sex">Sesso</label>
-                                {{ form_widget(form.sex) }}
-                        </div>
-                    
-                        </div>
-                    <div class=" row mb-3">
-                        <div class="col-12 col-md-6">
-                            <label for="firstname">Nome</label>
-                            {{ form_row(form.name) }}
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <label for="lastname">Cognome</label>
-                        {{ form_widget(form.Lastname) }}
-                        </div>
-                    </div>
-                    <div class=" row mb-3">
-                    <div class="col-6 col-md-6">
-                        <label for="dob">Data Nascita</label>
-                        {{ form_widget(form.dob) }}
-                        </div>
-                        <div class="col-6 col-md-6">
-                            <label for="zip">CAP</label>
-                            {{ form_widget(form.zip) }}
-                        </div>
-                    </div>
-                <div class=" row mb-3">
-                <div class="col-12 col-md-6">
-                            <label for="phone">Telefono</label>
-                            {{ form_widget(form.phone) }}
-                        </div>
-                        <div class="col-12 col-md-6">
-                        <label for="indirizzo">Indirizzo</label>
-                        {{ form_widget(form.address) }}
-                        </div>
-                    </div>
-                
-                    <div class="mb-2">
-                        {{ form_widget(form.confirmPrivacy) }} {{ form_label(form.confirmPrivacy, "Dichiaro d'esser maggiorenne. Ho letto ed accetto il regolamento e l'informativa privacy.", {
-                        'label_attr': {'class': 'labelCheck'}}) }}
-                    </div>
-                    <div class="mb-2">
-                    {{ form_widget(form.ConfirmPartner)}}{{ form_label(form.ConfirmPartner, "Acconsento al trasferimento dei miei dati personali ai partners indicati nell'informativa privacy per finalità di marketing.", {
-                                'label_attr': {'class': 'labelCheck'}}) }}
-                    </div>
-                    
-                    <input type="submit" name="submit" class="inputGreen mt-3" value="Ottieni un affare migliore ">
-                {{ form_end(form) }}
+            <div class="col-12 col-lg-3 heroform py-2 my-2 text-white rounded ">
+            <h2 class="thank-h2">GRAZIE !</h2>
+            <p class="thank-p">Riceverai a breve una chiamata da uno dei nostri consulenti.</p>
+            
             </div> 
     </div>
 </div>

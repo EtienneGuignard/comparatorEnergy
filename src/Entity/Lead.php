@@ -44,6 +44,12 @@ class Lead
     #[ORM\Column(length: 3, nullable: true)]
     private ?string $region = null;
 
+    #[ORM\Column(length: 15, nullable: true)]
+    private ?string $phone = null;
+
+    #[ORM\Column(length: 45)]
+    private ?string $sex = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -165,6 +171,30 @@ class Lead
     public function setRegion(?string $region): self
     {
         $this->region = $region;
+
+        return $this;
+    }
+
+    public function getPhone(): ?string
+    {
+        return $this->phone;
+    }
+
+    public function setPhone(?string $phone): self
+    {
+        $this->phone = $phone;
+
+        return $this;
+    }
+
+    public function getSex(): ?string
+    {
+        return $this->sex;
+    }
+
+    public function setSex(string $sex): self
+    {
+        $this->sex = $sex;
 
         return $this;
     }
