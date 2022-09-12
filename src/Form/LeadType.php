@@ -32,6 +32,7 @@ class LeadType extends AbstractType
                 'label' => false,
             ])
             ->add('sex', ChoiceType::class, [
+                'placeholder'=>'Sesso',
                 'label' => false,
                 'attr' =>['class'=> ''],
                 'choices'  => [
