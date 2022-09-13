@@ -34,6 +34,7 @@ class HomeController extends AbstractController
             $dob=$lead->getDob();
             $dobFormat=date_format($dob, 'Y-m-d');
             $zip=$lead->getZip();
+            $sex=$lead->getSex();
             $address=$lead->getAddress();
             $confirmPrivacy=$lead->isConfirmPrivacy();
             $confirmPartner=$lead->isConfirmPartner();
@@ -41,7 +42,7 @@ class HomeController extends AbstractController
             $region=$lead->getRegion();
             $entityManagerInterface->persist($lead);
             $entityManagerInterface->flush();
-            postData($ip,$name, $lastname, $email,$dobFormat,$zip,$address,$confirmPrivacy,$confirmPartner,$url,$region,$sid,$timestamp );
+            postData($ip,$name, $lastname, $email,$dobFormat,$zip,$address,$confirmPrivacy,$confirmPartner,$url,$region,$sid,$timestamp, $sex );
             return $this->redirectToRoute('app_thank_you');
         }
 
@@ -57,7 +58,7 @@ class HomeController extends AbstractController
         ]);
     }
 }
-function postData($ip,$name, $lastname, $email,$dobFormat,$zip,$address,$confirmPrivacy,$confirmPartner,$url,$region,$sid, $timestamp){
+function postData($ip,$name, $lastname, $email,$dobFormat,$zip,$address,$confirmPrivacy,$confirmPartner,$url,$region,$sid, $timestamp, $sex){
     $client= HttpClient::create();
         $client->request('POST', 'https://renovadsdatav1.herokuapp.com/api/lead/v2', [
         
@@ -71,6 +72,7 @@ function postData($ip,$name, $lastname, $email,$dobFormat,$zip,$address,$confirm
             'lastname' =>$lastname,
             'dob'=>$dobFormat,
             'sid'=>$sid,
+            'sex'=>$sex,
             'address1'=>$address,
             'zip'=>$zip,
             'confirmPrivacy'=>$confirmPrivacy,
