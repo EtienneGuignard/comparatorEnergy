@@ -19,8 +19,9 @@ class HomeController extends AbstractController
         if (isset($_GET['sid'])) {
             $sid=$_GET['sid'];
         }else{
-            $sid=4;
+            $sid=1;
         }
+        var_dump('test');
         $time=time();
         $timestamp= date("Y-m-d H:i:s", $time);
         $ip=get_client_ip();
@@ -35,6 +36,7 @@ class HomeController extends AbstractController
             $dobFormat=date_format($dob, 'Y-m-d');
             $zip=$lead->getZip();
             $sex=$lead->getSex();
+            $phone=$lead->getPhone();
             $address=$lead->getAddress();
             $confirmPrivacy=$lead->isConfirmPrivacy();
             $confirmPartner=$lead->isConfirmPartner();
@@ -42,7 +44,8 @@ class HomeController extends AbstractController
             $region=$lead->getRegion();
             $entityManagerInterface->persist($lead);
             $entityManagerInterface->flush();
-            postData($ip,$name, $lastname, $email,$dobFormat,$zip,$address,$confirmPrivacy,$confirmPartner,$url,$region,$sid,$timestamp, $sex);
+            var_dump('test');
+            postData($ip,$name, $lastname, $email, $dobFormat,$zip,$address,$confirmPrivacy,$confirmPartner,$url,$region,$sid,$timestamp, $sex, $phone);
             return $this->redirectToRoute('app_thank_you');
         }
 
@@ -58,9 +61,10 @@ class HomeController extends AbstractController
         ]);
     }
 }
-function postData($ip,$name, $lastname, $email,$dobFormat,$zip,$address,$confirmPrivacy,$confirmPartner,$url,$region,$sid, $timestamp, $sex){
+function postData($ip,$name, $lastname, $email,$dobFormat,$zip,$address,$confirmPrivacy,$confirmPartner,$url,$region,$sid, $timestamp, $sex, $phone){
+    // dd('test');
     $client= HttpClient::create();
-        $client->request('POST', 'https://renovadsdatav1.herokuapp.com/api/lead/v2', [
+    $response=$client->request('POST', 'https://renovadsdatav1.herokuapp.com/api/lead/v2', [
         
         'headers'=>[
             'x-api-token'=>'adf91a62b2e2e85fe33524685746903902cdcdfc795d8ea9c516ca3b8b3e1c71f69fe2ae2c0d2271e8da951f2fc397724bfdbe5290685cd9e4b21a27'
@@ -75,6 +79,7 @@ function postData($ip,$name, $lastname, $email,$dobFormat,$zip,$address,$confirm
             'sex'=>$sex,
             'address1'=>$address,
             'zip'=>$zip,
+            'phone'=>$phone,
             'confirmPrivacy'=>$confirmPrivacy,
             'confirmPartners'=>$confirmPartner,
             'url'=>$url,
@@ -84,6 +89,10 @@ function postData($ip,$name, $lastname, $email,$dobFormat,$zip,$address,$confirm
 
         ]
     ]);
+    dd($response);
+    dd( $response->getContent());
+    dd($response->getStatusCode());
+    
 }
 
 function get_client_ip() {
