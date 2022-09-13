@@ -19,7 +19,7 @@ class HomeController extends AbstractController
         if (isset($_GET['sid'])) {
             $sid=$_GET['sid'];
         }else{
-            $sid=1;
+            $sid=4;
         }
         $time=time();
         $timestamp= date("Y-m-d H:i:s", $time);
@@ -42,7 +42,7 @@ class HomeController extends AbstractController
             $region=$lead->getRegion();
             $entityManagerInterface->persist($lead);
             $entityManagerInterface->flush();
-            postData($ip,$name, $lastname, $email,$dobFormat,$zip,$address,$confirmPrivacy,$confirmPartner,$url,$region,$sid,$timestamp, $sex );
+            postData($ip,$name, $lastname, $email,$dobFormat,$zip,$address,$confirmPrivacy,$confirmPartner,$url,$region,$sid,$timestamp, $sex);
             return $this->redirectToRoute('app_thank_you');
         }
 
