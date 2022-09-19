@@ -8,6 +8,7 @@ framework:
             headers:
                 'Content-Type': 'application/ld+json'
 
+                'x-api-token': 'adf91a62b2e2e85fe33524685746903902cdcdfc795d8ea9c516ca3b8b3e1c71f69fe2ae2c0d2271e8da951f2fc397724bfdbe5290685cd9e4b21a27'
     # Enables session support. Note that the session will ONLY be started if you read or write from it.
     # Remove or comment this section to explicitly disable session support.
     session:

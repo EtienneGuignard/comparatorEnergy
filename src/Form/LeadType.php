@@ -6,6 +6,7 @@ use App\Entity\Lead;
 use Doctrine\DBAL\Types\BooleanType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
@@ -25,8 +26,19 @@ class LeadType extends AbstractType
             ->add('Lastname',TextType::class, [
                 'label' => false,
             ])
+            ->add('phone',TextType::class, [
+                'label' => false,
+            ])
             ->add('email', EmailType::class, [
                 'label' => false,
+            ])
+            ->add('sex', ChoiceType::class, [
+                'label' => false,
+                'attr' =>['class'=> ''],
+                'choices'  => [
+                    'Uomo' => 'M',
+                    'Donna' => 'F',
+                ],
             ])
             ->add('dob', DateType::class, [
                 'label' => false,
