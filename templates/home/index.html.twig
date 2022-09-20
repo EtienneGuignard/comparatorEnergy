@@ -36,58 +36,58 @@
             </div>
             <div class="col-12 col-lg-3 heroform py-2 my-2 text-white rounded">
                 {{ form_start(form, {'attr': {'class': 'formHome'}}) }}
-                    <div class="row mb-3">
-                        <div class="col-8 ">
-                            <label for="lead_email">Email</label>
-                                {{ form_widget(form.email) }}
-                        </div>
-                        <div class="col-4 ">
-                            <label for="lead_sex">Sesso</label>
-                                {{ form_widget(form.sex) }}
-                        </div>
-                    
-                        </div>
-                    <div class=" row mb-3">
-                        <div class="col-12 col-md-6">
-                            <label for="lead_name">Nome</label>
-                            {{ form_row(form.name) }}
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <label for="lead_Lastname">Cognome</label>
-                        {{ form_widget(form.Lastname) }}
-                        </div>
+                <div class="row mb-3">
+                    <div class="col-8 ">
+                        <label for="lead_email">Email</label>
+                            {{ form_widget(form.email) }}
                     </div>
-                    <div class=" row mb-3">
+                    <div class="col-4 ">
+                        <label for="lead_sex">Sesso</label>
+                            {{ form_widget(form.sex) }}
+                    </div>
+                
+                    </div>
+                <div class=" row mb-3">
+                    <div class="col-12 col-md-6">
+                        <label for="lead_name">Nome</label>
+                        {{ form_row(form.name) }}
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <label for="lead_Lastname">Cognome</label>
+                    {{ form_widget(form.Lastname) }}
+                    </div>
+                </div>
+                <div class=" row mb-3">
                     <div class="col-6 col-md-6">
                         <label for="lead_dob">Data Nascita</label>
                         {{ form_widget(form.dob) }}
-                        </div>
-                        <div class="col-6 col-md-6">
+                    </div>
+                    <div class="col-6 col-md-6">
                             <label for="lead_zip">CAP</label>
                             {{ form_widget(form.zip) }}
-                        </div>
                     </div>
+                </div>
                 <div class=" row mb-3">
-                <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-6">
                             <label for="lead_phone">Telefono</label>
                             {{ form_widget(form.phone) }}
-                        </div>
-                        <div class="col-12 col-md-6">
+                    </div>
+                    <div class="col-12 col-md-6">
                         <label for="lead_address">Indirizzo</label>
                         {{ form_widget(form.address) }}
-                        </div>
                     </div>
+                </div>
                 
-                    <div class="mb-2">
-                        {{ form_widget(form.confirmPrivacy) }} {{ form_label(form.confirmPrivacy, "Dichiaro d'esser maggiorenne. Ho letto ed accetto il regolamento e l'informativa privacy.", {
+                <div class="mb-2">
+                    {{ form_widget(form.confirmPrivacy) }} {{ form_label(form.confirmPrivacy, "Dichiaro d'esser maggiorenne. Ho letto ed accetto il regolamento e l'informativa privacy.", {
                         'label_attr': {'class': 'labelCheck'}}) }}
-                    </div>
-                    <div class="mb-2">
+                </div>
+                <div class="mb-2">
                     {{ form_widget(form.ConfirmPartner)}}{{ form_label(form.ConfirmPartner, "Acconsento al trasferimento dei miei dati personali ai partners indicati nell'informativa privacy per finalità di marketing.", {
                                 'label_attr': {'class': 'labelCheck'}}) }}
-                    </div>
+                </div>
                     
-                    <input type="submit" name="submit" class="inputGreen mt-3" value="Ottieni un affare migliore ">
+                <input type="submit" name="submit" class="inputGreen mt-3" value="Ottieni un affare migliore ">
                 {{ form_end(form) }}
             </div> 
     </div>
@@ -126,19 +126,19 @@
                 <h4 class="pt-2">Esperienza</h4> 
                 <p>Dal 2008 la società Futura enrgia, proprietaria de L'enrgia che voli, è tra le più competitive del settore. Mette in relazione professionisti selezionati e privati che hanno concrete necessità di prestiti, mutui e prodotti assicurativi.</p>
             </div>
-            </div>
         </div>
+    </div>
         <div class="col-sm-12 col-lg-6">
                 <div class="row align-items-center justify-content-center rowHome mx-1 mt-3">
                     
                     <div class="col-sm-12 col-md-2 text-center">
-                    <i class="fa fa-thumbs-up icon mt-3" aria-hidden="true"></i>
+                        <i class="fa fa-thumbs-up icon mt-3" aria-hidden="true"></i>
                     </div>
                     <div class="col-sm-12 col-md-10">
                         <h4 class="pt-2">Indipendente</h4> 
                         <p>Vi mettiamo in contatto con i migliori professionisti del settore in modo semplice e veloce. Bastano due clic per ricevere gratuitamente la proposta adatta alle vostre necessità</p>
                     </div>
-                    </div>
+                </div>
                     
         </div>
     </div>
@@ -146,7 +146,7 @@
 <section class="container-fluid mt-5">
     <div class="row justify-content-center  rowHome rowProcessSection">
         <div class=" col-12 col-lg-4 bg-white rounded">
-        <img  class="img-mobile" src="{{asset("../assets/img/office2.jpg")}}" id="office" alt="people working in an office">
+            <img  class="img-mobile" src="{{asset("../assets/img/office2.jpg")}}" id="office" alt="people working in an office">
             <h4 class="py-2 text-center">Revisore Facebook</h4>
             <div class="text-small text-center mb-2">
                                             <i class="fa-star fa text-warning"></i>
@@ -157,11 +157,10 @@
             </div>
             <p>Ottima offerta, prezzi giusti, trasparenza e chiarezza nelle fatture oltre che nel fornire informazioni e chiarimenti!! Da consigliare a chi vuole ricevere un ottimo servizio!!</p>
             <p class="text-center">Federico Pazienza</p>
-            <p></p>
         </div>
         <div class="col-12 col-lg-4">
-        <img  class="img-review w-100" src="{{asset("../assets/img/stockOffice.jpg")}}" id="office-2" alt="people working in an office">
-        <img  class="img-mobile" src="{{asset("../assets/img/office1.jpg")}}" id="office-3" alt="people working in an office">
+            <img  class="img-review w-100" src="{{asset("../assets/img/stockOffice.jpg")}}" id="office-2" alt="people working in an office">
+            <img  class="img-mobile" src="{{asset("../assets/img/office1.jpg")}}" id="office-3" alt="people working in an office">
         </div>
     </div>
 </section>
