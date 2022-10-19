@@ -87,7 +87,6 @@ function postData($ip,$name, $lastname, $email,$dobFormat,$zip,$address,$confirm
         ]
     ]);
 }
-
 function get_client_ip() {
     $ipaddress = '';
     if (getenv('HTTP_CLIENT_IP'))
