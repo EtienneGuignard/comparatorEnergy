@@ -43,7 +43,7 @@ class HomeController extends AbstractController
             $region=$lead->getRegion();
             $entityManagerInterface->persist($lead);
             $entityManagerInterface->flush();
-            postData($ip,$name, $lastname, $email, $dobFormat,$zip,$address,$confirmPrivacy,$confirmPartner,$url,$region,$sid,$timestamp, $sex, $phone);
+            // postData($ip,$name, $lastname, $email, $dobFormat,$zip,$address,$confirmPrivacy,$confirmPartner,$url,$region,$sid,$timestamp, $sex, $phone);
             return $this->redirectToRoute('app_thank_you');
         }
 
@@ -87,7 +87,6 @@ function postData($ip,$name, $lastname, $email,$dobFormat,$zip,$address,$confirm
         ]
     ]);
 }
-
 function get_client_ip() {
     $ipaddress = '';
     if (getenv('HTTP_CLIENT_IP'))
