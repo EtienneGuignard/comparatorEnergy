@@ -43,7 +43,7 @@ class HomeController extends AbstractController
             $region=$lead->getRegion();
             $entityManagerInterface->persist($lead);
             $entityManagerInterface->flush();
-            postData($ip,$name, $lastname, $email, $dobFormat,$zip,$address,$confirmPrivacy,$confirmPartner,$url,$region,$sid,$timestamp, $sex, $phone);
+            // postData($ip,$name, $lastname, $email, $dobFormat,$zip,$address,$confirmPrivacy,$confirmPartner,$url,$region,$sid,$timestamp, $sex, $phone);
             return $this->redirectToRoute('app_thank_you');
         }
 
